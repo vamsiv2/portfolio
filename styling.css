@@ -1,0 +1,283 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f7ff; /* Cool light blue background */
+    overflow-x: hidden;
+    animation: backgroundFade 3s ease-in-out;
+}
+
+@keyframes backgroundFade {
+    from {
+        background-color: #fff;
+    }
+    to {
+        background-color: #e6f7ff;
+    }
+}
+
+header {
+    background: linear-gradient(120deg, #00aaff, #00d1b2); /* Light blue to teal gradient */
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    animation: slideIn 1.2s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 5px solid white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.15);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
+}
+
+nav ul {
+    background: linear-gradient(120deg, #00aaff, #00d1b2); /* Matching navigation with the header */
+    overflow: hidden;
+    color: white;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    list-style: none;
+    animation: navFadeIn 1s ease-in-out;
+}
+
+@keyframes navFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #e6f7ff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+section {
+    padding: 60px 0;
+    background-color: #f0f8ff;
+    color: #333;
+    animation: sectionFadeIn 1.2s ease-in-out;
+}
+
+@keyframes sectionFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section:nth-of-type(even) {
+    background-color: #d5f7f3; /* Alternating background with soft teal */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #00aaff;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    animation: titleFadeIn 1.2s ease-in-out;
+}
+
+@keyframes titleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.skill-bar {
+    background: #b3e0ff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    height: 30px;
+    animation: barSlideIn 1.5s ease-in-out;
+}
+
+@keyframes barSlideIn {
+    from {
+        opacity: 0;
+        width: 0;
+    }
+    to {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+.skill-bar-fill {
+    background: linear-gradient(90deg, #00aaff, #00d1b2); /* Gradient fill for skill bars */
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    border-radius: 5px 0 0 5px;
+    width: 0; /* Start with 0 width */
+    animation: fillSkillBar 2.5s ease-in-out forwards;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2) inset;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+@keyframes fillSkillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; /* This will be overridden by inline styles */
+    }
+}
+
+.project {
+    margin-bottom: 30px;
+    background-color: #ccf2ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: projectFadeIn 1.3s ease-in-out;
+}
+
+@keyframes projectFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.project:hover {
+    transform: translateY(-12px);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    animation: formFadeIn 1.5s ease-in-out;
+}
+
+@keyframes formFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1) inset;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+    border-color: #00aaff;
+    box-shadow: 0px 0px 15px rgba(0, 170, 255, 0.3) inset;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #00d1b2; /* Change on hover to match the secondary color */
+    transform: scale(1.05);
+}
+
+footer {
+    background: linear-gradient(120deg, #00aaff, #00d1b2);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    animation: fadeIn 1.5s ease-in-out;
+}
